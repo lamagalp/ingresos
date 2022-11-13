@@ -1,0 +1,34 @@
+[
+    {
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "motivo": "Pago de cuota Automotor",
+        "fecha": "01/01/2022",
+        "dni": "20111222",
+        "id": 6
+    },
+    {
+        "nombre": "Matias",
+        "apellido": "Laurenti",
+        "motivo": "Reclamo",
+        "fecha": "11/11/2022",
+        "dni": "27111222",
+        "id": 8
+    },
+    {
+        "nombre": "Carlos",
+        "apellido": "Ananda",
+        "motivo": "Baja de Inmobiliario",
+        "fecha": "02/03/2022",
+        "dni": "28555000",
+        "id": 9
+    },
+    {
+        "nombre": "Mar\u00eda",
+        "apellido": "Lopez",
+        "motivo": "Alta de Ingresos Brutos",
+        "fecha": "14/07/2022",
+        "dni": "26333444",
+        "id": 10
+    }
+]

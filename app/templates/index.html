@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Ingresos de Personal</h1>
+
+  <br>
+  <a href="{{ url_for('alta_ingreso') }}"><button type="button" class="btn btn-primary">Alta ingreso</button></a>
+  <br><br>
+  <!-- crear tabla con lista de ingresos -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Fecha</th>
+        <th scope="col">Apellido y Nombre</th>    
+        <th scope="col">DNI</th>
+        <th scope="col">Motivo</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ing in ingresos %}
+      <tr>
+        <th scope="row">{{ ing.fecha }}</th>
+        <td>
+          {% if ing.apellido != '' %} 
+          {{ ing.apellido }}
+          {% endif %} 
+          {% if ing.nombre != '' %}
+          , {{ ing.nombre }}
+          {% endif %}
+        </td>      
+        <td>{{ ing.dni }}</td>
+        <td>{{ ing.motivo }}</td>
+        <td>
+          <a href="{{ url_for('index', borrar=ing.id) }}"><span class="btn btn-sm btn-outline-danger">Eliminar</span></a>
+          <a href="{{ url_for('editar_ingreso', id_ingreso=ing.id) }}"><span class="btn btn-sm btn-outline-success">Editar</span></a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
+
